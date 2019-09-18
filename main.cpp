@@ -8,6 +8,7 @@ int main()
 {
 	Server test;
 	test.consoleWrite(test);
+	test.fileWrite(test);
 	
 	return 0;
 };
