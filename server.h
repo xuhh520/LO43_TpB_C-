@@ -9,8 +9,12 @@ class Server
         Server(const &Server);
         ~Server();
         Server &operator=(const &Server);
-    private :
 
+        void consoleWrite();
+        void fileWrite();
+
+    private :
+        int data1,data2;
 };
 
 #endif // SERVER_H

@@ -1,17 +1,19 @@
+#include <iostream>
 #include "server.h"
+
+
 
 Server::Server()
 {
 
 
 }
-
-void consoleWrite()
+void Server::consoleWrite()
 {
 
 }
 
-void fileWrite()
+void Server::fileWrite()
 {
 
 }
