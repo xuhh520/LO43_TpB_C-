@@ -1,7 +1,5 @@
-class capteur{
-    sensor s;
-};
 
+/*
 class sensor{
     private: 
     float temperature,humidity;
@@ -11,10 +9,17 @@ class sensor{
     sensor();
     sensor(const sensor & s);
     ~sensor();
-    sensor &operator=(const Sensor& s);
+    sensor &operator=(const sensor& s);
 };
 sensor::sensor(){}
 sensor::~sensor(){}
+
+
+class capteur{
+    sensor s;
+};
+
+
 
 
 class scheduler{
@@ -30,12 +35,13 @@ class scheduler{
 scheduler::scheduler(){}
 scheduler::~scheduler(){}
 
-
+*/
 
 #include<iostream>
 #include<fstream>
-std::ostream& operator<<(std::ostream& out, const Server& s);
-std::ofstream& operator<<(std::ofstream& out, const Server& s);
+
+
+
 class Server {
     private:
     //capteur * point_capteurs;
@@ -46,6 +52,7 @@ class Server {
     public:
       Server();
       Server(const Server & S);
+      Server(int a, int b);
       ~Server();
       Server &operator=(const Server& s);
       friend std::ostream& operator<<(std::ostream& out, const Server& s);
@@ -56,8 +63,10 @@ class Server {
       }
       void fileWrite(const char * filename){
           std::ofstream outfile;
-          outfile.open(filename,ios::out);
-          std::outfile<<a<<" "<<b<<std::endl;
+          outfile.open(filename,std::ios::out);
+    //      out<<a<<" "<<b<<std::endl;
           //stocker les donnes
       }
 };
+std::ostream& operator<<(std::ostream& out, const Server& s);
+std::ofstream& operator<<(std::ofstream& out, const Server& s);
