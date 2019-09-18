@@ -1,0 +1,12 @@
+======== RAPPORT COMMANDES GIT ========
+
+
+Lire et faire le tuto (voir le sujet) et expliquer les commandes simplement (mettre pourquoi pas des captures d'écran)
+L'objectif est de montrer que nous avons compris et que nous avons fait le tuto.
+
+git config :
+	- permet de paramétrer le depôt GIT
+	- permet également de prendre connaissance de ces paramétres
+
+git init :
+	-
