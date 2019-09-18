@@ -4,8 +4,8 @@ class Server {
 	public:
 		Server();
 		Server(const Server&);
-		~Server();
-		Server &operator=(const T&);
+		virtual ~Server();
+		Server &operator=(const Server&);
 		void consoleWrite();
 		void fileWrite();
 }
