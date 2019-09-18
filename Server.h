@@ -36,6 +36,9 @@ scheduler::scheduler(){}
 scheduler::~scheduler(){}
 
 */
+#ifndef DEF_SERVER
+#define DEF_SERVER
+
 
 #include<iostream>
 #include<fstream>
@@ -50,7 +53,7 @@ class Server {
 
 
     public:
-      Server();
+      Server(){}
       Server(const Server & S);
       Server(int a, int b);
       ~Server();
@@ -70,3 +73,7 @@ class Server {
 };
 std::ostream& operator<<(std::ostream& out, const Server& s);
 std::ofstream& operator<<(std::ofstream& out, const Server& s);
+
+
+
+#endif
