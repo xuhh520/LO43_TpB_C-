@@ -9,7 +9,7 @@ class Server
 
 	Server();
 	Server(float temp, float hum, float lum, float son);
-	void consoleWrite(float temp, float hum, float lum, float son);
+	void consoleWrite(Server capteur);
 	void fileWrite();
 	~Server();
 
