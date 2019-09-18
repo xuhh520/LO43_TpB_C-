@@ -1,4 +1,4 @@
-#include "server.hpp"
+#include "Server.hpp"
 
 Server::Server()
 {
@@ -22,20 +22,26 @@ Server& Server::operator=(const Server& server)
 
 ostream& operator<<(ostream& output, Server& server)
 {
-    //Not yet implemented
+    output << server.toString() << endl;
+    return output;
 }
 
 const string Server::toString()
 {
-  //Not yet implemented
+  return "Not implemented yet (server.cpp).";
 }
 
 void Server::consoleWrite(string message)
 {
-  //Not yet implemented
+  cout << message << endl;
+  return;
 }
 
 void Server::fileWrite(string filePath, string message)
 {
-  //Not yet implemented
+  ofstream file;
+  file.open(filePath.c_str());
+  file << message;
+  file.close();
+  return;
 }

@@ -1,10 +1,13 @@
 #include <iostream>
-#include "server.hpp"
+#include "Server.hpp"
 
 using namespace std;
 
 int main() 
 {
-  //Not yet implemented
+  Server server;
+  server.consoleWrite("This is a server console message.");
+  server.fileWrite("server.txt", "This is a server file message.");
   return 0;
 }
+
