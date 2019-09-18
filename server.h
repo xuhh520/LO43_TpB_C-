@@ -8,8 +8,8 @@ class Server
 	public:
 
 	Server();
-	//Server(std::float temp, float hum, float lum, float son);
-	void consoleWrite();
+	Server(float temp, float hum, float lum, float son);
+	void consoleWrite(float temp, float hum, float lum, float son);
 	void fileWrite();
 	~Server();
 
