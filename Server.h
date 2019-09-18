@@ -30,8 +30,12 @@ class scheduler{
 scheduler::scheduler(){}
 scheduler::~scheduler(){}
 
+
+
 #include<iostream>
-#include<ofstream>
+#include<fstream>
+std::ostream& operator<<(std::ostream& out, const Server& s);
+std::ofstream& operator<<(std::ofstream& out, const Server& s);
 class Server {
     private:
     //capteur * point_capteurs;
@@ -44,26 +48,16 @@ class Server {
       Server(const Server & S);
       ~Server();
       Server &operator=(const Server& s);
-      friend ostream& operator<<(ostream& out, const Server& s);
+      friend std::ostream& operator<<(std::ostream& out, const Server& s);
+      friend std::ofstream& operator<<(std::ofstream& out, const Server& s);
       void consoleWrite(){
           std::cout<<a<<" "<<b<<std::endl;
           //visualiser les donnees
       }
       void fileWrite(const char * filename){
-          ofstream outfile;
+          std::ofstream outfile;
           outfile.open(filename,ios::out);
           std::outfile<<a<<" "<<b<<std::endl;
           //stocker les donnes
       }
 };
-ostream& operator<<(ostream& out, const Server& s){
-    out<<s.a<<" "<<s.b;
-    return out;
-}
-ofstream& operator<<(ofstream& out, const Server& s){
-    out<<s.a<<" "<<s.b;
-    return out;
-Server::Server(int first,int second){
-    a=first;b=second;
-}
-Server::~Server(){}
