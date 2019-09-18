@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include "Serveur.h"
 
 using namespace std;
@@ -30,8 +31,15 @@ using namespace std;
         cout << "Info :" << aff << endl;
     }
 
-    void Serveur::fileWrite(){
+    void Serveur::fileWrite(int aff){
+        ofstream monFlux("logs_save.txt");
+        if(monFlux){
 
+            monFlux << "Info :"<< aff << endl;
+
+        }else{
+            cout << "ERREUR : Impossible d'accerder au fichier."<< endl;
+        }
     }
 
 

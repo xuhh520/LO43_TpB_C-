@@ -18,7 +18,7 @@ class Serveur{
 
 
     void consoleWrite(int);
-    void fileWrite();
+    void fileWrite(int);
 
 
     private:
