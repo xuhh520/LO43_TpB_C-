@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Server
@@ -6,10 +7,10 @@ class Server
 public:
 	Server();
 	virtual ~Server();
-	Server(const Server&);
+	Server(const Server& s);
 	Server operator=(const Server& s);
-	void consoleWrite();
-	void fileWrite();
+	void consoleWrite(string log);
+	void fileWrite(string fichier, string log);
 private:
 
 };
