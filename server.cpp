@@ -5,21 +5,23 @@
 
 using namespace std;
 
+
 Server::Server() {}
 Server::Server(Server const& serv) {}
-Server::operator=(Server const& serv) { this = serv; }
+Server Server::operator=(Server const& serv) { return serv; }
 Server::~Server() {}
 
-Server::consoleWrite(string logs) 
+
+void Server::consoleWrite(string logs) const
 {
-	cout << log;
+	cout << logs;
 }
 
-Server::fileWrite(string file, string logs)
+void Server::fileWrite(string file, string logs) const
 {
 	ofstream str(file);
-	if(file)
+	if(str)
 	{
-		file << logs << endl;
+		str << logs << endl;
 	}
 }
