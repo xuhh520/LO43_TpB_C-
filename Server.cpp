@@ -11,17 +11,17 @@ Server::Server()
 	sonore=23.24;
 }
 
-/*Server::Server(float temp, float hum, float lum, float son) : temperature(temp), humidite(hum),lumiere(lum), sonore(son)
+Server::Server(float temp, float hum, float lum, float son) : temperature(temp), humidite(hum),lumiere(lum), sonore(son)
 {
 	
-}*/
-
-void consoleWrite()
-{
-	cout << "Temperature : " << temperature << endl << "Humidite : " << humidite << endl << "Lumiere : " << lumiere << endl << "Sonore : " << sonore << endl;
 }
 
-void fileWrite()
+void Server::consoleWrite(float temp, float hum, float lum, float son)
+{
+	cout << "Temperature : " << temp << endl << "Humidite : " << hum << endl << "Lumiere : " << lum << endl << "Sonore : " << son << endl;
+}
+
+void Server::fileWrite()
 {
 	
 }
