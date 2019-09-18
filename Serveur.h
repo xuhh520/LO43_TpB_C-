@@ -9,22 +9,24 @@ class Serveur{
 
     // Constructeur par defaut
     Serveur();
+
     // Constructeur par recopie
+    Serveur :: Serveur(const Serveur& autre);
 
     // Destructeur
     ~Serveur();
+
+
+    void consoleWrite(int);
+    void fileWrite();
+
 
     private:
 
     int temperature;
     int humidite;
-    int lumiere;
-    int sonore;
 
-    void consoleWrite();
-    void fileWrite;
-
-}
+};
 
 
 int main(int argc, char **argv) {
