@@ -2,6 +2,7 @@
 #define DEF_SERVER
 
 #include <string>
+#include <fstream>
 
 class Server
 {
@@ -10,7 +11,7 @@ class Server
 	Server();
 	Server(float temp, float hum, float lum, float son);
 	void consoleWrite(Server capteur);
-	void fileWrite();
+	void fileWrite(Server capteur);
 	~Server();
 
 	private:
