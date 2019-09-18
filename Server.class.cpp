@@ -18,8 +18,19 @@ Server::Server(const Server& unAutreObjet)
 Server::~Server()
 {}
 
-Server& Server::operator=(const Server& s)
-{}
+Server& Server::operator=(const Server &s)
+{
+    unAttribut = s.unAttribut;
+    unAutreAttribut = s.unAutreAttribut;
+}
+
+Server& Server::operator<<(ostream &out, const Server &s);
+{
+    consoleWrite(s);
+    fileWrite(s);
+
+    return out;
+}
 
 void Server::consoleWrite(char strToDisplay)
 {

@@ -9,7 +9,8 @@ class Server
         Server();
         Server(const Server& unAutreObjet);
         virtual ~Server();
-        Server& operator=(const Server& s);
+        Server& operator=(const Server &s);
+        Server& operator<<(ostream &out, const Server &s);
 
         void consoleWrite(char strToDisplay);
         void fileWrite(char strToWrite);
