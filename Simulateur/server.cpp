@@ -8,8 +8,8 @@ Server::Server() {}
 
 Server::Server(const Server& s) {}
 
-void Server::operator=(const Server& serv) {
-	
+void Server::operator=(Server const& serv) {
+	// this = &serv;
 }
 
 Server::~Server() {}
@@ -24,4 +24,10 @@ void Server::fileWrite(string filename) {
 	file << "donnees" << endl;
 	
 	file.close();
+}
+void Server::operator<<(ostream const& stream) {
+	//stream << this->consoleWrite();
+}
+void Server::operator<<(ofstream const& file) {
+	// file << this.fileWrite();
 }

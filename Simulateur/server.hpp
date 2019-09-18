@@ -1,4 +1,5 @@
 #include <string>
+#include <fstream>
 using namespace std;
 
 class Server {
@@ -6,7 +7,9 @@ class Server {
 		Server();
 		Server(const Server&);
 		virtual ~Server();
-		void operator=(const Server&);
+		void operator=(Server const&);
+		void operator<<(ostream const&);
+		void operator<<(ofstream const&);
 		void consoleWrite();
 		void fileWrite(string);
 };
