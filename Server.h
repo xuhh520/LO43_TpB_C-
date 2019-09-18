@@ -65,8 +65,8 @@ class Server {
           //visualiser les donnees
       }
       void fileWrite(const char * filename){
-          std::ofstream outfile;
-          outfile.open(filename,std::ios::out);
+          std::ofstream outfile(filename);
+          outfile<<a<<" "<<b;
     //      out<<a<<" "<<b<<std::endl;
           //stocker les donnes
       }
