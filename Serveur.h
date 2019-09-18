@@ -11,7 +11,7 @@ class Serveur{
     Serveur();
 
     // Constructeur par recopie
-    Serveur :: Serveur(const Serveur& autre);
+    Serveur(const Serveur& autre);
 
     // Destructeur
     ~Serveur();
@@ -27,15 +27,4 @@ class Serveur{
     int humidite;
 
 };
-
-
-int main(int argc, char **argv) {
-
-
-
-    return EXIT_SUCCESS;
-
-}
-
-
 
