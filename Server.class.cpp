@@ -1,38 +1,35 @@
+#include "Server.class.hpp"
+
 #include <iostream>
 #include <fstream>
 
-class Server
+Server::Server()
 {
-    public Server()
-    {
+    unAttribut = 0;
+    unAutreAttribut = 0;
+}
 
-    }
+Server::Server(const Server& unAutreObjet)
+{
+    unAttribut = 0;
+    unAutreAttribut = 0;
+}
 
-    public Server(const Server& unAutreObjet)
-    {
+Server::~Server()
+{}
 
-    }
+Server& Server::operator=(const Server& s)
+{}
 
-    virtual ~Server()
-    {
+void Server::consoleWrite(char strToDisplay)
+{
+    std::cout << strToDisplay;
+}
 
-    }
-
-    Server& operator=(const Server& s)
-    {
-
-    }
-
-    public void consoleWrite(char strToDisplay)
-    {
-        std::cout << strToDisplay;
-    }
-
-    public void fileWrite(char strToWrite)
-    {
-        ofstream logfile;
-        logfile.open("lo43Project.log");
-        logfile << strToWrite;
-        logfile.close();
-    }
+void Server::fileWrite(char strToWrite)
+{
+    ofstream logfile;
+    logfile.open("lo43Project.log");
+    logfile << strToWrite;
+    logfile.close();
 }
