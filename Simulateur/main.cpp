@@ -5,7 +5,7 @@ using namespace std;
 int main() {
 	Server *s = new Server();
 	s->consoleWrite();
-	s->fileWrite();
+	s->fileWrite("monlog.log");
 
 	return 0;
 }

@@ -8,7 +8,9 @@ Server::Server() {}
 
 Server::Server(const Server& s) {}
 
-Server::&operator=(const Server& serv) {}
+void Server::operator=(const Server& serv) {
+	
+}
 
 Server::~Server() {}
 

@@ -1,3 +1,4 @@
+#include <string>
 using namespace std;
 
 class Server {
@@ -5,7 +6,7 @@ class Server {
 		Server();
 		Server(const Server&);
 		virtual ~Server();
-		Server &operator=(const Server&);
+		void operator=(const Server&);
 		void consoleWrite();
-		void fileWrite("monlog.log");
+		void fileWrite(string);
 };
