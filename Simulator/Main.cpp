@@ -10,4 +10,3 @@ int main()
   server.fileWrite("server.txt", "This is a server file message.");
   return 0;
 }
-

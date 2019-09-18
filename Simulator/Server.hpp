@@ -18,4 +18,3 @@ public:
   void fileWrite(string, string);
 };
 
-
