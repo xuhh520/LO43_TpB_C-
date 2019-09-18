@@ -1,4 +1,6 @@
-class capteur{};
+class capteur{
+    sensor s;
+};
 
 class sensor{
     private: 
@@ -17,6 +19,7 @@ sensor::~sensor(){}
 
 class scheduler{
     private: 
+    Server s;
    
     public:
     scheduler();
@@ -27,11 +30,13 @@ class scheduler{
 scheduler::scheduler(){}
 scheduler::~scheduler(){}
 
-
+#include<iostream>
+#include<ofstream>
 class Server {
     private:
-    capteur * point_capteurs;
-    int num;//number of capteurs
+    //capteur * point_capteurs;
+    int a,b;
+   // int num;//number of capteurs
 
 
     public:
@@ -39,12 +44,26 @@ class Server {
       Server(const Server & S);
       ~Server();
       Server &operator=(const Server& s);
+      friend ostream& operator<<(ostream& out, const Server& s);
       void consoleWrite(){
+          std::cout<<a<<" "<<b<<std::endl;
           //visualiser les donnees
       }
-      void fileWrite(){
+      void fileWrite(const char * filename){
+          ofstream outfile;
+          outfile.open(filename,ios::out);
+          std::outfile<<a<<" "<<b<<std::endl;
           //stocker les donnes
       }
 };
-Server::Server(){}
+ostream& operator<<(ostream& out, const Server& s){
+    out<<s.a<<" "<<s.b;
+    return out;
+}
+ofstream& operator<<(ofstream& out, const Server& s){
+    out<<s.a<<" "<<s.b;
+    return out;
+Server::Server(int first,int second){
+    a=first;b=second;
+}
 Server::~Server(){}
