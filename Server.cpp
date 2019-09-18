@@ -4,9 +4,9 @@ using namespace std;
 class Server{
 	public :
 		Server(); 				//conctructor
-		Server(const &Server); 	//copy constructor
+		Server(const &Server  S); 	//copy constructor
 		~Server(); 				//destructor
-		Server &operator=(const &Server Serv);		//operator
+		Server &operator=(const &Server S);		//operator
 		
 		void consoleWrite (/*type donnée*/ data);
 		fileWrite
@@ -23,15 +23,18 @@ Server::Server(){
 	 data1 = 0;
 	 data2 = 0; }
 
-Server::Server(const &Server Serv){
-	data1 = data1.Serv;
-	data2 = data2.Serv;
+Server::Server(const &Server S){
+	data1 = data1.S;
+	data2 = data2.S;
 }
 
 Server::~Server(){
-	
+	//pas delete qué ??
 }
 
+Server &operator=(const &Server S){
+		
+}
 void consoleWrite (/*type donnée integer*/ data)
 {
 	cout >> "data : " >> data >> endl;
