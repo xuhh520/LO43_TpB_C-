@@ -1,8 +1,14 @@
+#include "Server.hpp"
 #include <iostream> 
 usingnamespace std;
-#include "Point.h"int 
-main() 
-{ 
+
+int main() 
+{
+  Server server;
+  server.consoleWrite("Hi.");
+  server.fileWrite( "le message envoye au server.");
+  return 0;
+}
 
 }   
 
