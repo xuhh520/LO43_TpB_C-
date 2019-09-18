@@ -16,9 +16,9 @@ Server::Server(float temp, float hum, float lum, float son) : temperature(temp),
 	
 }
 
-void Server::consoleWrite(float temp, float hum, float lum, float son)
+void Server::consoleWrite(Server capteur)
 {
-	cout << "Temperature : " << temp << endl << "Humidite : " << hum << endl << "Lumiere : " << lum << endl << "Sonore : " << son << endl;
+	cout << "Temperature : " << capteur.temperature << endl << "Humidite : " << capteur.humidite << endl << "Lumiere : " << capteur.lumiere << endl << "Sonore : " << capteur.sonore << endl;
 }
 
 void Server::fileWrite()
