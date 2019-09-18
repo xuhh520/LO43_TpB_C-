@@ -8,4 +8,4 @@ class Server {
 		Server &operator=(const Server&);
 		void consoleWrite();
 		void fileWrite();
-}
+};
