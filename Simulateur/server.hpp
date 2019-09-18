@@ -7,5 +7,5 @@ class Server {
 		virtual ~Server();
 		Server &operator=(const Server&);
 		void consoleWrite();
-		void fileWrite();
+		void fileWrite("monlog.log");
 };
